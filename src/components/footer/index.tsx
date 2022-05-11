@@ -8,9 +8,9 @@ function Footer() {
         <Text
           size={FontSize.ExtraRegular}
           weight={FontWeight.Bold}
-          color="#fff"
+          color="#ffffff"
         >
-          Forver & Always Our Love
+          Forever & Always Our Love
         </Text>
         <div className="hero-divider" />
         <Text size={FontSize.Small} weight={FontWeight.Medium} color="#fff">
