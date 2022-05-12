@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { imgs } from "../../assets/images";
 
 export const StyledContainer = styled.div`
   display: flex;
@@ -7,6 +6,12 @@ export const StyledContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 16px;
+
+  .headerImg {
+    width: 100%;
+    max-height: 400px;
+    max-width: 400px;
+  }
 
   .divider {
     height: 16px;
@@ -28,7 +33,8 @@ export const Card = styled.div`
   margin: 16px;
   padding: 16px;
 
-  max-width: 20%;
+  max-width: 300px;
+  width: 100%;
 
   border: 1px solid pink;
 

@@ -15,9 +15,10 @@ function App() {
       <Introduction />
       <Countdown date="06/23/2022, 23:59:59" />
       <EventTimeline />
-      <Gallery />
-      <DjRequests />
+
+      {/* <DjRequests /> */}
       <SpecialRequests />
+      <Gallery />
       <Footer />
     </div>
   );

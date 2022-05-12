@@ -2,24 +2,36 @@ import styled from "styled-components";
 
 export const StyledContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding: 40px;
 
-  .container {
-    margin: 1rem 0;
-  }
-
-  .details {
+  .card-container {
+    margin: 1rem;
+    margin-top: 56px;
+    padding: 1rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     background-color: rgba(94, 154, 142, 0.05);
-    padding: 40px 45px;
+    border: 1px solid grey;
+    box-shadow: inset 0 0 0 4px #eee, inset 0 0 0 2px #ddd, inset 0 0 0 4px #ccc,
+      inset 0 0 0 2px #bbb, inset 0 0 0 2px #aaa, inset 0 0 0 2px #999,
+      inset 0 0 0 2px #888;
 
-    & > div{
-      margin-top: 0.7rem;
+    & > div {
+      margin: 0.7rem;
     }
   }
 
   .intro-img {
-    width: 100%;
+    width: 200px;
     height: 200px;
+    border-radius: 50%;
+    margin-top: -70px;
+    margin-bottom: 0.7rem;
   }
 `;

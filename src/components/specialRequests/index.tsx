@@ -2,6 +2,7 @@
 import { Card, StyledContainer } from "./style";
 import { Text, FontSize } from "../../helpers/text";
 import { imgs } from "../../assets/images";
+import { useEffect, useState } from "react";
 
 function SpecialRequests() {
   const relatives = [
@@ -84,18 +85,28 @@ function SpecialRequests() {
     },
   ];
 
+  const [currentImg, setCurrentImg] = useState<number>(0);
+
+  useEffect(() => {
+    if (currentImg === 10) {
+      setTimeout(() => setCurrentImg((p) => 0), 3000);
+    } else {
+      setTimeout(() => setCurrentImg((p) => p + 2), 3000);
+    }
+  });
+
   const showCard = (item: any, index: number) => {
     return (
       <Card key={index}>
-        <Text size={FontSize.Small}>{item.message}</Text>
+        <Text size={FontSize.Small}>{item?.message}</Text>
 
         <div className="row">
           <div>
-            <img src={item.logo} alt={item.relationship} className="logo" />
+            <img src={item?.logo} alt={item?.relationship} className="logo" />
           </div>
           <div className="column">
-            <Text size={FontSize.Regular}>{item.name}</Text>
-            <Text size={FontSize.Mini}>{item.relationship}</Text>
+            <Text size={FontSize.Regular}>{item?.name}</Text>
+            <Text size={FontSize.Mini}>{item?.relationship}</Text>
           </div>
         </div>
       </Card>
@@ -104,12 +115,17 @@ function SpecialRequests() {
 
   return (
     <StyledContainer>
-      <Text size={FontSize.ExtraRegular}>Special Requests</Text>
-
+      <img
+        src={imgs.specialRequest}
+        alt="Special Request"
+        className="headerImg"
+      />
       <div className="divider" />
 
       <div className="slideshow">
-        {relatives.map((item, index) => showCard(item, index))}
+        {showCard(relatives[currentImg], currentImg)}
+        {currentImg < relatives.length - 1 &&
+          showCard(relatives[currentImg + 1], currentImg + 1)}
       </div>
     </StyledContainer>
   );
