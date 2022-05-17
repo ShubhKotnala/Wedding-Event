@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { imgs } from "../../assets/images";
 
 export const StyledContainer = styled.div`
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(${imgs.heroImg});
+  // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  //   url(${imgs.bgFlower});
   height: 100vh;
   width: 100vw;
   background-position: center;
@@ -17,42 +17,79 @@ export const StyledContainer = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    // color: white;
   }
 
-  .hero-bottom-text {
-    position: absolute;
-    bottom: 0%;
-    left: 50%;
-    transform: translate(-50%, -0%);
-    background-color: rgba(94, 154, 142, 1);
-    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-    color: white;
-    text-align: center;
+  .text-title {
+    font-family: "Allura", cursive;
+    font-weight: 500;
+    font-size: 2px;
+    line-height: 1.1;
+    color: #fff;
+    margin: 0 0 0.4em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    animation-duration: 1s;
+    animation-name: slideInUp;
+    visibility: visible;
 
-    padding: 2rem;
-    padding-bottom: 1rem;
-
-    // animation-duration: 2s;
-    // animation-timing-function: ease;
-    // animation-delay: 0s;
-    // animation-iteration-count: infinite;
-    // animation-direction: normal;
-    // animation-fill-mode: none;
-    // animation-play-state: running;
-    // animation-name: save-the-date-pulse;
+    @keyframes slideInUp {
+      0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+      }
+      100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    }
   }
-  
-  // @keyframes save-the-date-pulse {
-  //   from {
-  //     border: 1px solid rgba(94, 154, 142, 0.1);
-  //     border-bottom: 0;
-  //   }
-  //   to {
-  //     border: 10px solid rgba(94, 154, 142, 0.7);
-  //     border-bottom: 0;
-  //   }
-  // }
+
+  .text-sub-title {
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-left: none;
+    border-right: none;
+    padding: 1rem 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    letter-spacing: 1px;
+    font-size: 0.94444rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1.1;
+
+    animation-delay: 1s;
+    animation-name: fadeIn;
+    animation-duration: 5s;
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    // animation: save-the-date-pulse 1s infinite;
+
+    // @keyframes save-the-date-pulse {
+    //   0% {
+    //     -webkit-transform: scale3d(1, 1, 1);
+    //     transform: scale3d(1, 1, 1);
+    //   }
+    //   50% {
+    //     -webkit-transform: scale3d(0.95, 0.95, 0.95);
+    //     transform: scale3d(0.95, 0.95, 0.95);
+    //   }
+    //   100% {
+    //     -webkit-transform: scale3d(1, 1, 1);
+    //     transform: scale3d(1, 1, 1);
+    //   }
+    // }
+  }
 
   .hero-divider {
     height: 0.7rem;
