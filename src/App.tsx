@@ -15,8 +15,9 @@ function App() {
       <Introduction />
       <Countdown date="06/23/2022, 23:59:59" />
       <EventTimeline />
+
+      {/* <DjRequests /> */}
       <Gallery />
-      <DjRequests />
       <SpecialRequests />
       <Footer />
     </div>

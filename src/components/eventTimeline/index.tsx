@@ -1,24 +1,28 @@
 import { StyledContainer } from "./style";
-import { Text, FontSize } from "../../helpers/text";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { imgs } from "../../assets/images";
 
 function EventTimeline() {
   return (
     <StyledContainer>
-      <Text size={FontSize.ExtraRegular} color="#fff">
-        Wedding Events
-      </Text>
+      <img
+        src={imgs.weddingEvents}
+        alt="Special Request"
+        className="headerImg"
+      />
 
       <div className="divider" />
-      <VerticalTimeline>
+      <VerticalTimeline lineColor="#cd5453">
         <VerticalTimelineElement
+          contentStyle={{ border: "1px solid #cd5453" }}
+          contentArrowStyle={{ display: "none" }}
           className="vertical-timeline-element--work"
           date="Monday, 20 June 2022"
-          iconStyle={{ background: "rgba(94, 154, 142, 1)", color: "#fff" }}
+          iconStyle={{ background: "#e3dcdc", color: "#000" }}
         >
           <h3 className="vertical-timeline-element-title">Mehendi</h3>
 
@@ -32,8 +36,10 @@ function EventTimeline() {
 
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
+          contentArrowStyle={{ display: "none" }}
+          contentStyle={{ border: "1px solid #cd5453" }}
           date="Tuesday, 21 June 2022"
-          iconStyle={{ background: "rgba(94, 154, 142, 1)", color: "#fff" }}
+          iconStyle={{ background: "#e3dcdc", color: "#000" }}
         >
           <h3 className="vertical-timeline-element-title">Haldi</h3>
 
@@ -47,8 +53,10 @@ function EventTimeline() {
 
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
+          contentArrowStyle={{ display: "none" }}
+          contentStyle={{ border: "1px solid #cd5453" }}
           date="Wednesday, 22 June 2022"
-          iconStyle={{ background: "rgba(94, 154, 142, 1)", color: "#fff" }}
+          iconStyle={{ background: "#e3dcdc", color: "#000" }}
         >
           <h3 className="vertical-timeline-element-title">Ladies Sangeet</h3>
 
@@ -62,8 +70,10 @@ function EventTimeline() {
 
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
+          contentArrowStyle={{ display: "none" }}
+          contentStyle={{ border: "1px solid #cd5453" }}
           date="Thursday, 23 June 2022"
-          iconStyle={{ background: "rgba(94, 154, 142, 1)", color: "#fff" }}
+          iconStyle={{ background: "#e3dcdc", color: "#000" }}
         >
           <h3 className="vertical-timeline-element-title">Wedding</h3>
 

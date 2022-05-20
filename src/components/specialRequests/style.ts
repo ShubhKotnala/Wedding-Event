@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { imgs } from "../../assets/images";
 
 export const StyledContainer = styled.div`
   display: flex;
@@ -7,6 +6,13 @@ export const StyledContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 16px;
+  margin-bottom: 16px;
+
+  .headerImg {
+    width: 100%;
+    max-height: 400px;
+    max-width: 400px;
+  }
 
   .divider {
     height: 16px;
@@ -19,6 +25,30 @@ export const StyledContainer = styled.div`
     align-items: center;
     justify-content: center;
   }
+
+  .dot-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active,
+  .dot:hover {
+    background-color: #717171;
+  }
 `;
 
 export const Card = styled.div`
@@ -28,7 +58,8 @@ export const Card = styled.div`
   margin: 16px;
   padding: 16px;
 
-  max-width: 20%;
+  max-width: 300px;
+  width: 100%;
 
   border: 1px solid pink;
 

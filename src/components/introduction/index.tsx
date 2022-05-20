@@ -5,50 +5,43 @@ import { imgs } from "../../assets/images";
 function Introduction() {
   const showAseemCard = () => {
     return (
-      <div className="container">
-        <img src={imgs.countdownImg} alt="Aseem" className="intro-img" />
-        <div className="details">
-          <Text size={FontSize.Large} weight={FontWeight.Bold}>
-            DULHA
-          </Text>
-          <Text>
-            Hi, dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since
-            the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book. It has survived not only
-            five centuries.
-          </Text>
-
-          <Text size={FontSize.Mini}>- Aseem</Text>
-        </div>
+      <div className="card-container">
+        <img src={imgs.countdownImg} alt="Tanya" className="intro-img" />
+        <Text size={FontSize.ExtraRegular} weight={FontWeight.Bold}>
+          Aseem Bansal
+        </Text>
+        <Text>
+          Hi, Lorem Ipsum has been the industry's standard dummy text ever since
+          the 1500s, a galley of type and scrambled it to make a type specimen
+          book. It has survived not only five centuries.
+        </Text>
       </div>
     );
   };
 
   const showTanyaCard = () => {
     return (
-      <div className="container">
+      <div className="card-container">
         <img src={imgs.heroImg} alt="Tanya" className="intro-img" />
-        <div className="details">
-          <Text size={FontSize.Large} weight={FontWeight.Bold}>
-            DULHAN
-          </Text>
-          <Text>
-            Hi, Lorem Ipsum has been the industry's standard dummy
-            text ever since the 1500s, a galley of type and scrambled it to make
-            a type specimen book. It has survived not only five centuries.
-          </Text>
-
-          <Text size={FontSize.Mini}>- Tanya</Text>
-        </div>
+        <Text size={FontSize.ExtraRegular} weight={FontWeight.Bold}>
+          Tanya Sharma
+        </Text>
+        <Text>
+          Hi, Lorem Ipsum has been the industry's standard dummy text ever since
+          the 1500s, a galley of type and scrambled it to make a type specimen
+          book. It has survived not only five centuries.
+        </Text>
       </div>
     );
   };
 
   return (
     <StyledContainer>
-      {showAseemCard()}
-      {showTanyaCard()}
+      <img src={imgs.brideGroom} alt="Bride & Groom" className="headerImg" />
+      <div className="container">
+        {showAseemCard()}
+        {showTanyaCard()}
+      </div>
     </StyledContainer>
   );
 }
