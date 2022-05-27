@@ -1,13 +1,7 @@
 import styled from "styled-components";
-import { imgs } from "../../assets/images";
 
 export const StyledContainer = styled.div`
-  background-image: url(${imgs.heroImg});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-
+margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,6 +9,31 @@ export const StyledContainer = styled.div`
   padding: 2rem;
 
   .divider {
-    height: 16px;
+    height: 2rem;
+  }
+
+  .content{
+    display: flex;
+    flex-direction: row;
+    justidy-content: space-between;
+    align-items: center;
+  }
+
+  .headerImg {
+    width: 100%;
+    max-height: 400px;
+    max-width: 400px;
+  }
+
+  .logoImg {
+    margin-right: 1rem;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid #e3dcdc;
+  }
+
+  .content-details{
+    max-width: 50%;
   }
 `;

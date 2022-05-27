@@ -3,13 +3,15 @@ import { imgs } from "../../assets/images";
 
 export const StyledContainer = styled.div`
   // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  //   url(${imgs.bgFlower});
+  //   url(${imgs.intro});
+  background-image: url(${imgs.intro});
   height: 100vh;
   width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   position: relative;
+  overflow: hidden;
 
   .hero-mid-text {
     text-align: center;

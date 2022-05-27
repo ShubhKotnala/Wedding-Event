@@ -5,7 +5,6 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { imgs } from "../../assets/images";
-import { Text, FontSize, FontWeight } from "../../helpers/text";
 
 function EventTimeline() {
   return (
@@ -23,48 +22,15 @@ function EventTimeline() {
           contentArrowStyle={{ display: "none" }}
           className="vertical-timeline-element--work"
           date="Monday, 20 June 2022"
-          iconStyle={{
-            background: "#e3dcdc",
-            color: "#000",
-          }}
+          iconStyle={{ background: "#e3dcdc", color: "#000" }}
         >
-          <div className="content">
-            {/* <img src={imgs.mehendiA} alt="Mehendi" className="logoImg" /> */}
+          <h3 className="vertical-timeline-element-title">Mehendi</h3>
 
-            {/* <div className="content-details"> */}
-            <div>
-              <Text
-                size={FontSize.Large}
-                weight={FontWeight.Bold}
-                styles={{
-                  fontFamily: "Marck Script",
-                  margin: "0.5rem",
-                  textAlign: "center",
-                }}
-                color="#668679"
-              >
-                Mehendi
-              </Text>
-              {/* <Text
-                size={FontSize.ExtraSmall}
-                weight={FontWeight.Bold}
-                styles={{
-                  // fontFamily: "Marck Script",
-                  margin: "0.5rem",
-                  textAlign: "center",
-                }}
-                color="#668679"
-              >
-                1 C Mahaveer international colony, Behind
-                Vridhashram <br /> 03:30pm
-              </Text> */}
-              <div>
-                <h4>Where</h4> - 1 C Mahaveer international colony, Behind
-                Vridhashram
-                <br />
-                <h4>When</h4> - 03:30pm
-              </div>
-            </div>
+          <div>
+            <h4>Where</h4> - 1 C Mahaveer international colony, Behind
+            Vridhashram
+            <br />
+            <h4>When</h4> - 03:30pm
           </div>
         </VerticalTimelineElement>
 
@@ -75,18 +41,8 @@ function EventTimeline() {
           date="Tuesday, 21 June 2022"
           iconStyle={{ background: "#e3dcdc", color: "#000" }}
         >
-          <Text
-            size={FontSize.Large}
-            weight={FontWeight.Bold}
-            styles={{
-              fontFamily: "Marck Script",
-              margin: "0.5rem",
-              textAlign: "center",
-            }}
-            color="#668679"
-          >
-            Haldi
-          </Text>
+          <h3 className="vertical-timeline-element-title">Haldi</h3>
+
           <div>
             <h4>Where</h4> - 1 C Mahaveer international colony, Behind
             Vridhashram
@@ -102,18 +58,8 @@ function EventTimeline() {
           date="Wednesday, 22 June 2022"
           iconStyle={{ background: "#e3dcdc", color: "#000" }}
         >
-          <Text
-            size={FontSize.Large}
-            weight={FontWeight.Bold}
-            styles={{
-              fontFamily: "Marck Script",
-              margin: "0.5rem",
-              textAlign: "center",
-            }}
-            color="#668679"
-          >
-            Ladies Sangeet
-          </Text>{" "}
+          <h3 className="vertical-timeline-element-title">Ladies Sangeet</h3>
+
           <div>
             <h4>Where</h4> - 1 C Mahaveer international colony, Behind
             Vridhashram
@@ -129,18 +75,8 @@ function EventTimeline() {
           date="Thursday, 23 June 2022"
           iconStyle={{ background: "#e3dcdc", color: "#000" }}
         >
-          <Text
-            size={FontSize.Large}
-            weight={FontWeight.Bold}
-            styles={{
-              fontFamily: "Marck Script",
-              margin: "0.5rem",
-              textAlign: "center",
-            }}
-            color="#668679"
-          >
-            Wedding
-          </Text>
+          <h3 className="vertical-timeline-element-title">Wedding</h3>
+
           <div>
             <h4>Where</h4> - 1 C Mahaveer international colony, Behind
             Vridhashram

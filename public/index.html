@@ -20,13 +20,11 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script&family=Dosis:wght@200&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Marck+Script&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="./sakura.css" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -41,6 +39,35 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script src="./sakura.js"></script>
+    <script>
+      var sakura = new Sakura("body", {
+        colors: [
+          {
+            gradientColorStart: "rgba(255, 183, 197, 0.9)",
+            gradientColorEnd: "rgba(255, 197, 208, 0.9)",
+            gradientColorDegree: 120,
+            minSize: 12,
+            maxSize: 30,
+          },
+          {
+            gradientColorStart: "rgba(151, 205, 173, 0.7)",
+            gradientColorEnd: "rgba(151, 205, 173)",
+            gradientColorDegree: 120,
+            minSize: 12,
+            maxSize: 30,
+          },
+          {
+            gradientColorStart: "rgba(228, 183, 69, 0.7)",
+            gradientColorEnd: "rgba(228, 183, 69, 1)",
+            gradientColorDegree: 120,
+            minSize: 12,
+            maxSize: 30,
+          },
+        ],
+      });
+      sakura.start();
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
