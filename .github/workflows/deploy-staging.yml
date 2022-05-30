@@ -4,8 +4,8 @@
 name: Staging - Deploy to Firebase Hosting
 'on':
   push:
-    branches:
-      - '!main'
+    branches-ignore:
+      - main
 jobs:
   build_and_preview:
     runs-on: ubuntu-latest
