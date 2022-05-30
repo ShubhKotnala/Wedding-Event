@@ -3,7 +3,6 @@ import { StyledContainer } from "./style";
 function HeroImage() {
   return (
     <StyledContainer>
-
     </StyledContainer>
   );
 }
