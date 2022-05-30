@@ -5,14 +5,13 @@ import brideGroom from "./bride.png";
 import saveTheDate from "./saveTheDate.png";
 import intro from "./intro.png";
 import heart from "./heart.png";
-import Aseem from "./Aseem.gif";
-import Tanya from "./Tanya.gif";
+import Aseem from "./Aseem1.gif";
+import Tanya from "./Tanya1.gif";
 import ring from "./ring.png";
 import gudu from "./gudu.JPG";
 import tayi from "./tayi.JPG";
 import muma from "./muma.JPG";
 import divya from "./divya.jpeg";
-import footer from "./footer.png";
 import homeMap from "./home-map.png";
 
 export const imgs = {
@@ -30,6 +29,5 @@ export const imgs = {
   tayi,
   gudu,
   divya,
-  footer,
-  homeMap
+  homeMap,
 };

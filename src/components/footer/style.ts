@@ -1,15 +1,12 @@
 import styled from "styled-components";
-import { imgs } from "../../assets/images";
 
 export const StyledContainer = styled.div`
-  height: 20vh;
-  background-color: #798D85;
+  height: 12vh;
+  background-color: #2b394c;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  background-image: url(${imgs.footer});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  padding: 1rem;
+  text-align: center;
 `;

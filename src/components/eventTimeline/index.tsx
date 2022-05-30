@@ -8,150 +8,151 @@ import { imgs } from "../../assets/images";
 import { Text, FontSize, FontWeight } from "../../helpers/text";
 
 function EventTimeline() {
+  const venues = [
+    {
+      date: "Sunday, 19 June 2022",
+      time: "12:00pm",
+      function: "Ring Ceremony",
+      logo: imgs.homeMap,
+      name: "Pagoda Hotel",
+      address: "14 Gole Bazar, Near Railway Station",
+      url: "https://goo.gl/maps/M8ePXHSZoC4KwQfR7",
+      color: "rgba(124, 30, 37, 0.9)",
+    },
+    {
+      date: "Monday, 20 June 2022",
+      time: "06:00pm",
+      function: "Mehendi",
+      logo: imgs.homeMap,
+      name: "Our Residence",
+      address: "1 C Mahaveer international colony, Behind Vridhashram",
+      url: "https://goo.gl/maps/M8ePXHSZoC4KwQfR7",
+      color: "rgba(0, 100, 73, 0.9)",
+    },
+    {
+      date: "Tuesday, 21 June 2022",
+      time: "04:00pm",
+      function: "Ladies Sangeet",
+      logo: imgs.homeMap,
+      name: "Hotel Black Panther",
+      address: "7th Floor, CGR Mall, Hanumangarh Rd, Chahal Chowk",
+      url: "https://goo.gl/maps/M8ePXHSZoC4KwQfR7",
+      color: "rgba(19, 89, 144, 0.9)",
+    },
+    {
+      date: "Wednesday, 22 June 2022",
+      time: "06:00pm",
+      function: "Haldi",
+      logo: imgs.homeMap,
+      name: "Our Residence",
+      address: "1 C Mahaveer international colony, Behind Vridhashram",
+      url: "https://goo.gl/maps/M8ePXHSZoC4KwQfR7",
+      color: "rgba(219, 151, 31, 1)",
+    },
+    {
+      date: "Thursday, 23 June 2022",
+      time: "09:00pm",
+      function: "Wedding",
+      logo: imgs.homeMap,
+      name: "Fort Rajwara",
+      address: "National Highway 62, 0.3 KM from Home Land City",
+      url: "https://goo.gl/maps/M8ePXHSZoC4KwQfR7",
+      color: "rgba(142, 100, 24, 0.9)",
+    },
+  ];
+
+  const handleClick = (url: string) => {
+    window.open(url);
+  };
+
   return (
     <StyledContainer>
       <img
         src={imgs.weddingEvents}
-        alt='Special Request'
-        className='headerImg'
+        alt="Event Timeline"
+        className="headerImg"
       />
 
-      <div className='divider' />
-      <VerticalTimeline lineColor='#cd5453'>
-        <VerticalTimelineElement
-          contentStyle={{ border: "1px solid #cd5453", borderRadius: "20px" }}
-          contentArrowStyle={{ display: "none" }}
-          className='vertical-timeline-element--work'
-          date='Monday, 20 June 2022'
-          iconStyle={{
-            background: "#e3dcdc",
-            color: "#000",
-          }}>
-          <div className='blur_img_container'>
-            <div className='bg_imgs bg_img_mehendi'></div>
-            <div className='content'>
-              {/* <img src={imgs.mehendiA} alt="Mehendi" className="logoImg" /> */}
+      <div className="divider" />
+      <VerticalTimeline lineColor="#e3dcdc">
+        {venues.map((item, index) => (
+          <VerticalTimelineElement
+            key={index}
+            contentStyle={{
+              border: `2px solid ${item.color}`,
+              borderRadius: "1rem",
+            }}
+            contentArrowStyle={{ display: "none" }}
+            className="vertical-timeline-element--work"
+            iconStyle={{
+              background: item.color,
+              color: "#000",
+            }}
+          >
+            <div key={index} className="details">
+              <Text
+                size={FontSize.Large}
+                weight={FontWeight.Medium}
+                styles={{
+                  fontFamily: "Caveat, cursive",
+                  textAlign: "center",
+                  marginTop: "0.5rem",
+                }}
+                color={item.color}
+              >
+                {item?.function}
+              </Text>
 
-              {/* <div className="content-details"> */}
-              <div>
+              <Text
+                size={FontSize.ExtraRegular}
+                weight={FontWeight.Medium}
+                styles={{
+                  fontFamily: "Marck Script",
+                  textAlign: "center",
+                  margin: "1rem 0",
+                }}
+              >
+                {item?.date} at {item.time}
+              </Text>
+
+              <div
+                className="dateTime"
+                onClick={() => handleClick(item.url)}
+                style={{ backgroundColor: item.color }}
+              >
                 <Text
-                  size={FontSize.Large}
+                  size={FontSize.Regular}
                   weight={FontWeight.Bold}
-                  styles={{
-                    fontFamily: "Marck Script",
-                    margin: "0.5rem",
-                    textAlign: "center",
-                  }}
-                  color='#668679'>
-                  Mehendi
+                  color="white"
+                >
+                  {item?.name}
                 </Text>
-
-                <div>
-                  <h4>Where</h4> - 1 C Mahaveer international colony, Behind
-                  Vridhashram
-                  <br />
-                  <h4>When</h4> - 03:30pm
-                </div>
-              </div>
-            </div>
-          </div>
-        </VerticalTimelineElement>
-
-        <VerticalTimelineElement
-          className='vertical-timeline-element--work'
-          contentArrowStyle={{ display: "none" }}
-          contentStyle={{ border: "1px solid #cd5453", borderRadius: "20px" }}
-          date='Tuesday, 21 June 2022'
-          iconStyle={{ background: "#e3dcdc", color: "#000" }}>
-          <div className='blur_img_container'>
-            <div className='bg_imgs bg_img_haldi'></div>
-            <div className='content'>
-              <div>
                 <Text
-                  size={FontSize.Large}
-                  weight={FontWeight.Bold}
-                  styles={{
-                    fontFamily: "Marck Script",
-                    margin: "0.5rem",
-                    textAlign: "center",
-                  }}
-                  color='#668679'>
-                  Haldi
+                  size={FontSize.Small}
+                  styles={{ marginTop: "0.5rem" }}
+                  color="white"
+                >
+                  {item?.address}
                 </Text>
-                <div>
-                  <h4>Where</h4> - 1 C Mahaveer international colony, Behind
-                  Vridhashram
-                  <br />
-                  <h4>When</h4> - 03:30pm
-                </div>
               </div>
-            </div>
-          </div>
-        </VerticalTimelineElement>
 
-        <VerticalTimelineElement
-          className='vertical-timeline-element--work'
-          contentArrowStyle={{ display: "none" }}
-          contentStyle={{ border: "1px solid #cd5453", borderRadius: "20px" }}
-          date='Wednesday, 22 June 2022'
-          iconStyle={{ background: "#e3dcdc", color: "#000" }}>
-          <div className='blur_img_container'>
-            <div className='bg_imgs bg_img_sangeet'></div>
-            <div className='content'>
-              <div>
-                <Text
-                  size={FontSize.Large}
-                  weight={FontWeight.Bold}
-                  styles={{
-                    fontFamily: "Marck Script",
-                    margin: "0.5rem",
-                    textAlign: "center",
-                  }}
-                  color='#668679'>
-                  Ladies Sangeet
-                </Text>{" "}
-                <div>
-                  <h4>Where</h4> - 1 C Mahaveer international colony, Behind
-                  Vridhashram
-                  <br />
-                  <h4>When</h4> - 03:30pm
-                </div>
-              </div>
+              <img
+                src={item?.logo}
+                loading="lazy"
+                alt={item?.name}
+                className="mapImg"
+                onClick={() => handleClick(item.url)}
+              />
+              <Text
+                size={FontSize.Mini}
+                weight={FontWeight.Medium}
+                color="grey"
+              >
+                Click on map to get directions
+              </Text>
             </div>
-          </div>
-        </VerticalTimelineElement>
-
-        <VerticalTimelineElement
-          className='vertical-timeline-element--work'
-          contentArrowStyle={{ display: "none" }}
-          contentStyle={{ border: "1px solid #cd5453", borderRadius: "20px" }}
-          date='Thursday, 23 June 2022'
-          iconStyle={{ background: "#e3dcdc", color: "#000" }}>
-          <div className='blur_img_container'>
-            <div className='bg_imgs bg_img_wedding'></div>
-            <div className='content'>
-              <div>
-                <Text
-                  size={FontSize.Large}
-                  weight={FontWeight.Bold}
-                  styles={{
-                    fontFamily: "Marck Script",
-                    margin: "0.5rem",
-                    textAlign: "center",
-                  }}
-                  color='#668679'>
-                  Wedding
-                </Text>
-                <div>
-                  <h4>Where</h4> - 1 C Mahaveer international colony, Behind
-                  Vridhashram
-                  <br />
-                  <h4>When</h4> - 03:30pm
-                </div>
-              </div>
-            </div>
-          </div>
-        </VerticalTimelineElement>
+          </VerticalTimelineElement>
+        ))}
       </VerticalTimeline>
     </StyledContainer>
   );

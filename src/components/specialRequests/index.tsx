@@ -30,7 +30,7 @@ function SpecialRequests() {
   const showCard = (item: any, index: number) => {
     return (
       <Card key={index}>
-        <img src={item?.logo} alt={item?.relationship} className="logo" />
+        <img src={item?.logo}  loading="lazy" alt={item?.relationship} className="logo" />
 
         <Text
           size={FontSize.ExtraRegular}
@@ -65,6 +65,7 @@ function SpecialRequests() {
         src={imgs.specialRequest}
         alt="Special Request"
         className="headerImg"
+        loading="lazy"
       />
       <div className="divider" />
 

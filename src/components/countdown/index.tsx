@@ -62,7 +62,7 @@ class CountDown extends Component<any, any> {
     return (
       <>
         <Container>
-          <img src={imgs.saveTheDate} alt="Countdown" className="headerImg" />
+          <img src={imgs.saveTheDate} alt="Countdown" className="headerImg"  loading="lazy"/>
           <SecondContainer>
             <Text
               size={FontSize.ExtraRegular}

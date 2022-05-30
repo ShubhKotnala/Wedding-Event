@@ -2,8 +2,6 @@ import styled from "styled-components";
 import { imgs } from "../../assets/images";
 
 export const StyledContainer = styled.div`
-  // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-  //   url(${imgs.intro});
   background-image: url(${imgs.intro});
   height: 100vh;
   width: 100vw;
