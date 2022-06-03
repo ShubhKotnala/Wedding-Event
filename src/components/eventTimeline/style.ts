@@ -6,7 +6,7 @@ export const StyledContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-
+  
   .divider {
     height: 2rem;
   }
@@ -26,7 +26,7 @@ export const StyledContainer = styled.div`
 
   .mapImg{
     width: 100%;
-    height: 200px;
+    height: 250px;
     border-radius: 0.5rem;
     margin-top: -2rem;
     cursor: pointer;

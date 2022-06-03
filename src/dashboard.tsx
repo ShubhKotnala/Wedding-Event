@@ -10,7 +10,7 @@ function Dashboard() {
     <>
       <HeroImage />
       <Introduction />
-      <Countdown date="06/23/2022, 23:59:59" />
+      <Countdown date="06/22/2022, 23:59:59" />
       <EventTimeline />
       <SpecialRequests />
       <Footer />

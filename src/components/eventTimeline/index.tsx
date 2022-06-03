@@ -13,51 +13,56 @@ function EventTimeline() {
       date: "Sunday, 19 June 2022",
       time: "12:00pm",
       function: "Ring Ceremony",
-      logo: imgs.homeMap,
+      logo: imgs.pagodaMap,
       name: "Pagoda Hotel",
       address: "14 Gole Bazar, Near Railway Station",
-      url: "https://goo.gl/maps/M8ePXHSZoC4KwQfR7",
+      url: "https://goo.gl/maps/X24ZuDZQfYUUJBJBA",
       color: "rgba(124, 30, 37, 0.9)",
+      shadowColor: "rgba(124, 30, 37, 0.2)",
     },
     {
       date: "Monday, 20 June 2022",
-      time: "06:00pm",
+      time: "04:00pm",
       function: "Mehendi",
       logo: imgs.homeMap,
       name: "Our Residence",
       address: "1 C Mahaveer international colony, Behind Vridhashram",
       url: "https://goo.gl/maps/M8ePXHSZoC4KwQfR7",
       color: "rgba(0, 100, 73, 0.9)",
+      shadowColor: "rgba(0, 100, 73, 0.2)",
     },
     {
       date: "Tuesday, 21 June 2022",
-      time: "04:00pm",
+      time: "05:00pm",
       function: "Ladies Sangeet",
-      logo: imgs.homeMap,
+      logo: imgs.cgrMap,
       name: "Hotel Black Panther",
       address: "7th Floor, CGR Mall, Hanumangarh Rd, Chahal Chowk",
-      url: "https://goo.gl/maps/M8ePXHSZoC4KwQfR7",
+      url: "https://goo.gl/maps/XbYBDeBBzgpFArjB6",
       color: "rgba(19, 89, 144, 0.9)",
+      shadowColor: "rgba(19, 89, 144, 0.2)",
     },
     {
       date: "Wednesday, 22 June 2022",
-      time: "06:00pm",
+      time: "11:00am",
       function: "Haldi",
       logo: imgs.homeMap,
       name: "Our Residence",
       address: "1 C Mahaveer international colony, Behind Vridhashram",
       url: "https://goo.gl/maps/M8ePXHSZoC4KwQfR7",
       color: "rgba(219, 151, 31, 1)",
+      shadowColor: "rgba(219, 151, 31, 0.2)",
     },
     {
       date: "Thursday, 23 June 2022",
       time: "09:00pm",
       function: "Wedding",
-      logo: imgs.homeMap,
-      name: "Fort Rajwara",
+      logo: imgs.rajwadaMap,
+      name: "Fort Rajwada",
       address: "National Highway 62, 0.3 KM from Home Land City",
-      url: "https://goo.gl/maps/M8ePXHSZoC4KwQfR7",
+      url: "https://goo.gl/maps/JCgRMVg9aYmsdUkg9",
       color: "rgba(142, 100, 24, 0.9)",
+      shadowColor: "rgba(142, 100, 24, 0.2)",
     },
   ];
 
@@ -80,6 +85,7 @@ function EventTimeline() {
             key={index}
             contentStyle={{
               border: `2px solid ${item.color}`,
+              boxShadow: `inset 0em 0em .3em .3em ${item.shadowColor}`,
               borderRadius: "1rem",
             }}
             contentArrowStyle={{ display: "none" }}
@@ -107,7 +113,7 @@ function EventTimeline() {
                 size={FontSize.ExtraRegular}
                 weight={FontWeight.Medium}
                 styles={{
-                  fontFamily: "Marck Script",
+                  fontFamily: "Cursive",
                   textAlign: "center",
                   margin: "1rem 0",
                 }}

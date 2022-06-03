@@ -7,7 +7,6 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/dj" exact></Route>
         <Route path="/" exact>
           <Dashboard />
         </Route>

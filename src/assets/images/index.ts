@@ -1,22 +1,24 @@
-import specialRequest from "./specialRequest.png";
-import gallery from "./ourGallery.png";
-import weddingEvents from "./weddingEvents.png";
-import brideGroom from "./bride.png";
-import saveTheDate from "./saveTheDate.png";
 import intro from "./intro.png";
+import Aseem from "./aseemGif.gif";
+import Tanya from "./tanyaGif.gif";
 import heart from "./heart.png";
-import Aseem from "./Aseem1.gif";
-import Tanya from "./Tanya1.gif";
 import ring from "./ring.png";
-import gudu from "./gudu.JPG";
-import tayi from "./tayi.JPG";
-import muma from "./muma.JPG";
+import specialRequest from "./specialRequest.png";
+import weddingEvents from "./weddingEvents.png";
+import saveTheDate from "./saveTheDate.png";
+import brideGroom from "./bride.png";
+import rajwadaMap from "./rajwadaMap.png";
+import pagodaMap from "./pagodaMap.png";
+import homeMap from "./homeMap.png";
+import cgrMap from "./cgrMap.png";
+import tayi from "./tayi.jpg";
+import muma from "./muma.jpg";
 import divya from "./divya.jpeg";
-import homeMap from "./home-map.png";
+import gudu from "./gudu.jpg";
+
 
 export const imgs = {
   specialRequest,
-  gallery,
   weddingEvents,
   brideGroom,
   intro,
@@ -30,4 +32,7 @@ export const imgs = {
   gudu,
   divya,
   homeMap,
+  cgrMap,
+  rajwadaMap,
+  pagodaMap,
 };
