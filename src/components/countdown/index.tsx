@@ -7,6 +7,7 @@ import {
 } from "./style";
 import { Text, FontSize, FontWeight } from "../../helpers/text";
 import { imgs } from "../../assets/images";
+import MyImage from "../../helpers/image";
 
 class CountDown extends Component<any, any> {
   state = {
@@ -62,7 +63,12 @@ class CountDown extends Component<any, any> {
     return (
       <>
         <Container>
-          <img src={imgs.saveTheDate} alt="Countdown" className="headerImg"  loading="lazy"/>
+          <MyImage
+            src={imgs.saveTheDate}
+            alt="Countdown"
+            className="headerImg"
+            loading="lazy"
+          />
           <SecondContainer>
             <Text
               size={FontSize.ExtraRegular}

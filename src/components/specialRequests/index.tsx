@@ -2,6 +2,7 @@
 import { Card, StyledContainer } from "./style";
 import { Text, FontSize, FontWeight } from "../../helpers/text";
 import { imgs } from "../../assets/images";
+import MyImage from "../../helpers/image";
 
 function SpecialRequests() {
   const relatives = [
@@ -20,7 +21,7 @@ function SpecialRequests() {
       name: "Nitika & Neeraj Garg",
       relationship: "Behen - Jiju",
     },
-     {
+    {
       logo: imgs.divya,
       name: "Divya & Nitin Bansal",
       relationship: "Bhabhi - Bhai",
@@ -30,7 +31,12 @@ function SpecialRequests() {
   const showCard = (item: any, index: number) => {
     return (
       <Card key={index}>
-        <img src={item?.logo}  loading="lazy" alt={item?.relationship} className="logo" />
+        <MyImage
+          src={item?.logo}
+          loading="lazy"
+          alt={item?.relationship}
+          className="logo"
+        />
 
         <Text
           size={FontSize.ExtraRegular}
@@ -61,7 +67,7 @@ function SpecialRequests() {
 
   return (
     <StyledContainer>
-      <img
+      <MyImage
         src={imgs.specialRequest}
         alt="Special Request"
         className="headerImg"
@@ -69,9 +75,7 @@ function SpecialRequests() {
       />
       <div className="divider" />
 
-      <div className="slideshow">
-        {relatives.map((i, j) => showCard(i, j))}
-      </div>
+      <div className="slideshow">{relatives.map((i, j) => showCard(i, j))}</div>
     </StyledContainer>
   );
 }

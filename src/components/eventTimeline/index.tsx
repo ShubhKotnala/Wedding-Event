@@ -6,6 +6,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { imgs } from "../../assets/images";
 import { Text, FontSize, FontWeight } from "../../helpers/text";
+import MyImage from "../../helpers/image";
 
 function EventTimeline() {
   const venues = [
@@ -72,7 +73,7 @@ function EventTimeline() {
 
   return (
     <StyledContainer>
-      <img
+      <MyImage
         src={imgs.weddingEvents}
         alt="Event Timeline"
         className="headerImg"
@@ -142,7 +143,7 @@ function EventTimeline() {
                 </Text>
               </div>
 
-              <img
+              <MyImage
                 src={item?.logo}
                 loading="lazy"
                 alt={item?.name}

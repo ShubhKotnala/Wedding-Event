@@ -1,10 +1,7 @@
 import { StyledContainer } from "./style";
 
 function HeroImage() {
-  return (
-    <StyledContainer>
-    </StyledContainer>
-  );
+  return <StyledContainer></StyledContainer>;
 }
 
 export default HeroImage;
