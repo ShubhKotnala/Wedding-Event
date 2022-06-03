@@ -11,10 +11,10 @@ import rajwadaMap from "./rajwadaMap.png";
 import pagodaMap from "./pagodaMap.png";
 import homeMap from "./homeMap.png";
 import cgrMap from "./cgrMap.png";
-import tayi from "./tayi.jpg";
-import muma from "./muma.jpg";
-import divya from "./divya.jpeg";
-import gudu from "./gudu.jpg";
+import tayi from "./taya.jpg";
+import muma from "./papa.jpg";
+import divya from "./kaku.jpeg";
+import gudu from "./jiju.jpg";
 
 
 export const imgs = {
