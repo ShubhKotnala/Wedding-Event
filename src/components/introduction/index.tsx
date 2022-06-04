@@ -1,46 +1,47 @@
 import { StyledContainer } from "./style";
-import { Text, FontSize, FontWeight } from "../../helpers/text";
 import { imgs } from "../../assets/images";
+import MyImage from "../../helpers/image";
 
 function Introduction() {
   const showAseemCard = () => {
     return (
-      <div className="card-container">
-        <img src={imgs.countdownImg} alt="Tanya" className="intro-img" />
-        <Text size={FontSize.ExtraRegular} weight={FontWeight.Bold}>
-          Aseem Bansal
-        </Text>
-        <Text>
-          Hi, Lorem Ipsum has been the industry's standard dummy text ever since
-          the 1500s, a galley of type and scrambled it to make a type specimen
-          book. It has survived not only five centuries.
-        </Text>
-      </div>
+      <MyImage
+        src={imgs.Aseem}
+        loading="lazy"
+        alt="Aseem"
+        className="intro-img"
+      />
     );
   };
 
   const showTanyaCard = () => {
     return (
-      <div className="card-container">
-        <img src={imgs.heroImg} alt="Tanya" className="intro-img" />
-        <Text size={FontSize.ExtraRegular} weight={FontWeight.Bold}>
-          Tanya Sharma
-        </Text>
-        <Text>
-          Hi, Lorem Ipsum has been the industry's standard dummy text ever since
-          the 1500s, a galley of type and scrambled it to make a type specimen
-          book. It has survived not only five centuries.
-        </Text>
-      </div>
+      <MyImage
+        src={imgs.Tanya}
+        loading="lazy"
+        alt="Tanya"
+        className="intro-img"
+      />
     );
   };
 
   return (
     <StyledContainer>
-      <img src={imgs.brideGroom} alt="Bride & Groom" className="headerImg" />
+      <MyImage
+        src={imgs.brideGroom}
+        loading="lazy"
+        alt="Bride & Groom"
+        className="headerImg"
+      />
       <div className="container">
-        {showAseemCard()}
         {showTanyaCard()}
+        <MyImage
+          src={imgs.heart}
+          loading="lazy"
+          alt="Weds"
+          className="logoImg"
+        />
+        {showAseemCard()}
       </div>
     </StyledContainer>
   );

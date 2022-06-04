@@ -7,7 +7,9 @@ const handleFontSize = (size: FontSize) => {
       return "font-size: 60px; line-height: 60px;";
     case FontSize.Large:
       return "font-size: 48px; line-height: 52.8px;";
-    case FontSize.ExtraRegular:
+      case FontSize.MediumLarge:
+        return "font-size: 32px; line-height: 48px;";
+      case FontSize.ExtraRegular:
       return "font-size: 24px; line-height: 29px;";
     case FontSize.Small:
       return "font-size: 16px; line-height: 19.6px;";

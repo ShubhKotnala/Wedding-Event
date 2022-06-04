@@ -1,139 +1,81 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { Card, StyledContainer } from "./style";
-import { Text, FontSize } from "../../helpers/text";
+import { Text, FontSize, FontWeight } from "../../helpers/text";
 import { imgs } from "../../assets/images";
-import { useEffect, useState } from "react";
+import MyImage from "../../helpers/image";
 
 function SpecialRequests() {
   const relatives = [
     {
-      logo: imgs.countdownImg,
-      message:
-        "Far far away, behind the word mountains. Separated they live in, a large language ocean.",
-      name: "Naveen Bansal",
-      relationship: "Taya",
+      logo: imgs.tayi,
+      name: "Geeta & Naveen Bansal",
+      relationship: "Tayi - Taya",
     },
     {
-      logo: imgs.countdownImg,
-      message:
-        "Far far away, behind the word mountains. Separated they live in, a large language ocean.",
-      name: "Geeta Bansal",
-      relationship: "Tayi",
+      logo: imgs.muma,
+      name: "Neelu & Sandeep Bansal",
+      relationship: "Mumma - Papa",
     },
     {
-      logo: imgs.countdownImg,
-      message:
-        "Far far away, behind the word mountains. Separated they live in, a large language ocean.",
-      name: "Sandeep Bansal",
-      relationship: "Papa",
+      logo: imgs.gudu,
+      name: "Nitika & Neeraj Garg",
+      relationship: "Behen - Jiju",
     },
     {
-      logo: imgs.countdownImg,
-      message:
-        "Far far away, behind the word mountains. Separated they live in, a large language ocean.",
-      name: "Neelu Bansal",
-      relationship: "Mumma",
-    },
-    {
-      logo: imgs.countdownImg,
-      message:
-        "Far far away, behind the word mountains. Separated they live in, a large language ocean.",
-      name: "Neeraj Garg",
-      relationship: "Jiju",
-    },
-    {
-      logo: imgs.countdownImg,
-      message:
-        "Far far away, behind the word mountains. Separated they live in, a large language ocean.",
-      name: "Nitika Garg",
-      relationship: "Behen",
-    },
-    {
-      logo: imgs.countdownImg,
-      message:
-        "Far far away, behind the word mountains. Separated they live in, a large language ocean.",
-      name: "Nitin Bansal",
-      relationship: "Bhai",
-    },
-    {
-      logo: imgs.countdownImg,
-      message:
-        "Far far away, behind the word mountains. Separated they live in, a large language ocean.",
-      name: "Divya Bansal",
-      relationship: "Bhabhi",
-    },
-    {
-      logo: imgs.countdownImg,
-      message:
-        "Far far away, behind the word mountains. Separated they live in, a large language ocean.",
-      name: "Samta Bansal",
-      relationship: "Behen",
-    },
-    {
-      logo: imgs.countdownImg,
-      message:
-        "Far far away, behind the word mountains. Separated they live in, a large language ocean.",
-      name: "Nipun Bansal",
-      relationship: "Bhai",
-    },
-    {
-      logo: imgs.countdownImg,
-      message:
-        "Far far away, behind the word mountains. Separated they live in, a large language ocean.",
-      name: "Baby Garg",
-      relationship: "Bhanja",
+      logo: imgs.divya,
+      name: "Divya & Nitin Bansal",
+      relationship: "Bhabhi - Bhai",
     },
   ];
-
-  const [currentImg, setCurrentImg] = useState<number>(0);
-
-  useEffect(() => {
-    if (currentImg === 10) {
-      setTimeout(() => setCurrentImg((p) => 0), 3000);
-    } else {
-      setTimeout(() => setCurrentImg((p) => p + 2), 3000);
-    }
-  });
 
   const showCard = (item: any, index: number) => {
     return (
       <Card key={index}>
-        <Text size={FontSize.Small}>{item?.message}</Text>
+        <MyImage
+          src={item?.logo}
+          loading="lazy"
+          alt={item?.relationship}
+          className="logo"
+        />
 
-        <div className="row">
-          <div>
-            <img src={item?.logo} alt={item?.relationship} className="logo" />
-          </div>
-          <div className="column">
-            <Text size={FontSize.Regular}>{item?.name}</Text>
-            <Text size={FontSize.Mini}>{item?.relationship}</Text>
-          </div>
-        </div>
+        <Text
+          size={FontSize.ExtraRegular}
+          weight={FontWeight.Bold}
+          styles={{
+            fontFamily: "Marck Script, cursive",
+            textAlign: "center",
+            marginTop: "0.5rem",
+          }}
+          color="#668679"
+        >
+          {item?.name}
+        </Text>
+        <Text
+          size={FontSize.ExtraRegular}
+          styles={{
+            fontFamily: "Caveat",
+            marginTop: "0.5rem",
+            textAlign: "center",
+          }}
+          color="#cd5453"
+        >
+          {item?.relationship}
+        </Text>
       </Card>
     );
   };
 
-  console.log("currentImg",currentImg);
-
   return (
     <StyledContainer>
-      <img
+      <MyImage
         src={imgs.specialRequest}
         alt="Special Request"
         className="headerImg"
+        loading="lazy"
       />
       <div className="divider" />
 
-      <div className="slideshow">
-        {showCard(relatives[currentImg], currentImg)}
-        {currentImg < relatives.length - 1 &&
-          showCard(relatives[currentImg + 1], currentImg + 1)}
-      </div>
-      <div className="dot-container">
-        {[0, 2, 4, 6, 8, 10].map((el) => (
-          <div className={`dot ${currentImg === el && " active"}`} key={el} />
-        ))}
-      </div>
+      <div className="slideshow">{relatives.map((i, j) => showCard(i, j))}</div>
     </StyledContainer>
   );
 }

@@ -12,41 +12,95 @@ export const StyledContainer = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 16px;
   }
 
-  .card-container {
-    margin: 1rem;
-    margin-top: 56px;
-    padding: 1rem;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: rgba(94, 154, 142, 0.05);
-    border: 1px solid grey;
-    box-shadow: inset 0 0 0 4px #eee, inset 0 0 0 2px #ddd, inset 0 0 0 4px #ccc,
-      inset 0 0 0 2px #bbb, inset 0 0 0 2px #aaa, inset 0 0 0 2px #999,
-      inset 0 0 0 2px #888;
-
-    & > div {
-      margin: 0.7rem;
-    }
-  }
-
   .intro-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-top: -70px;
-    margin-bottom: 0.7rem;
+    width: 400px;
+    height: 400px;
   }
 
   .headerImg {
     width: 100%;
     max-height: 400px;
     max-width: 400px;
+  }
+
+  .logoImg {
+    width: 100%;
+    max-height: 400px;
+    max-width: 400px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    .intro-img {
+      width: 100%;
+      max-height: 350px;
+      max-width: 350px;
+    }
+  }
+
+  @media screen and (max-width: 1180px) {
+    .intro-img {
+      width: 100%;
+      max-height: 320px;
+      max-width: 320px;
+    }
+
+    .logoImg {
+      width: 100%;
+      max-height: 350px;
+      max-width: 350px;
+    }
+  }
+
+  @media screen and (max-width: 1070px) {
+    .intro-img {
+      width: 100%;
+      max-height: 300px;
+      max-width: 300px;
+    }
+
+    .logoImg {
+      width: 100%;
+      max-height: 320px;
+      max-width: 320px;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .intro-img {
+      width: 100%;
+      max-height: 280px;
+      max-width: 280px;
+    }
+
+    .logoImg {
+      width: 100%;
+      max-height: 280px;
+      max-width: 280px;
+    }
+  }
+
+
+  @media screen and (max-width: 920px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .intro-img {
+      width: 100%;
+      max-height: 350px;
+      max-width: 350px;
+    }
+
+    .logoImg {
+      width: 100%;
+      max-height: 250px;
+      max-width: 250px;
+    }
   }
 `;
