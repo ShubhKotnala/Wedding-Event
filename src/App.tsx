@@ -1,21 +1,18 @@
 import "./App.css";
-import Countdown from "./components/countdown";
-import DjRequests from "./components/djRequests";
-import Footer from "./components/footer";
-import Gallery from "./components/gallery";
-import HeroImage from "./components/heroImage";
-import Introduction from "./components/introduction";
+import Dashboard from "./dashboard";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NotFound from "./components/notFound";
 
 function App() {
   return (
-    <div>
-      <HeroImage />
-      <Introduction />
-      <Countdown date="06/23/2022, 23:59:59" />
-      <Gallery />
-      <DjRequests />
-      <Footer />
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact>
+          <Dashboard />
+        </Route>
+        <Route component={NotFound} />
+      </Switch>
+    </Router>
   );
 }
 

@@ -1,6 +1,13 @@
 import React, { Component } from "react";
-import { TimerContainer, StyledTimerContainer, Container } from "./style";
+import {
+  TimerContainer,
+  StyledTimerContainer,
+  Container,
+  SecondContainer,
+} from "./style";
 import { Text, FontSize, FontWeight } from "../../helpers/text";
+import { imgs } from "../../assets/images";
+import MyImage from "../../helpers/image";
 
 class CountDown extends Component<any, any> {
   state = {
@@ -35,10 +42,15 @@ class CountDown extends Component<any, any> {
   showTimerBox(label: string, value: any) {
     return (
       <StyledTimerContainer>
-        <Text size={FontSize.Large} color="#5e9a8e" weight={FontWeight.Medium}>
+        <Text
+          size={FontSize.Large}
+          color="#CD5454"
+          weight={FontWeight.Medium}
+          styles={{ paddingTop: "4rem" }}
+        >
           {value}
         </Text>
-        <Text size={FontSize.ExtraSmall} color="#5e9a8e">
+        <Text size={FontSize.ExtraSmall} color="rgba(205, 84, 84, 0.9)">
           {label.toUpperCase()}
         </Text>
       </StyledTimerContainer>
@@ -49,28 +61,38 @@ class CountDown extends Component<any, any> {
     const { days, hours, minutes, seconds, timeUp } = this.state;
     const dayString = days > 1 ? "days" : "day";
     return (
-      <Container>
-        <div className="waiting-text">
-          <Text size={FontSize.Small} weight={FontWeight.Medium} color="#fff">
-            {timeUp ? "The time has come..." : "We're waiting for..."}
-          </Text>
-        </div>
-        <div className="adventure-text">
-          <Text
-            size={FontSize.ExtraRegular}
-            weight={FontWeight.Bold}
-            color="#fff"
-          >
-            {timeUp ? "Join us!" : "the Adventure to begin!"}
-          </Text>
-        </div>
-        <TimerContainer>
-          {this.showTimerBox(dayString, days)}
-          {this.showTimerBox("hours", hours)}
-          {this.showTimerBox("minutes", minutes)}
-          {this.showTimerBox("seconds", seconds)}
-        </TimerContainer>
-      </Container>
+      <>
+        <Container>
+          <MyImage
+            src={imgs.saveTheDate}
+            alt="Countdown"
+            className="headerImg"
+            loading="lazy"
+          />
+          <SecondContainer>
+            <Text
+              size={FontSize.ExtraRegular}
+              weight={FontWeight.Bold}
+              styles={{
+                fontFamily: "Marck Script",
+                margin: "0.5rem",
+                textAlign: "center",
+              }}
+              color="#668679"
+            >
+              {timeUp
+                ? "So it begins... Bless our holy union with your presence!"
+                : " We are excited to celebrate our special day with you!"}
+            </Text>
+          </SecondContainer>
+          <TimerContainer>
+            {this.showTimerBox(dayString, days)}
+            {this.showTimerBox("hours", hours)}
+            {this.showTimerBox("minutes", minutes)}
+            {this.showTimerBox("seconds", seconds)}
+          </TimerContainer>
+        </Container>
+      </>
     );
   }
 }

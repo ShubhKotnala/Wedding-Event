@@ -14,6 +14,7 @@ export enum FontWeight {
 export enum FontSize {
   ExtraLarge = "extraLarge", // size - 60, LH - 60
   Large = "large", // size - 48, LH - 52.8
+  MediumLarge = "mediumLarge", // size - 32, LH - 48
   ExtraRegular = "extraRegular", // size - 24, LH - 29
   Regular = "regular", // size - 18, LH - 21.6
   Small = "small", // size - 16, LH - 19.6
