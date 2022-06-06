@@ -16,7 +16,7 @@ function EventTimeline() {
       function: "Ring Ceremony",
       logo: imgs.pagodaMap,
       name: "Pagoda Hotel",
-      address: "14 Gole Bazar, Near Railway Station",
+      address: "14 Gol Bazar, Near Railway Station",
       url: "https://goo.gl/maps/X24ZuDZQfYUUJBJBA",
       color: "rgba(124, 30, 37, 0.9)",
       shadowColor: "rgba(124, 30, 37, 0.2)",
@@ -38,7 +38,7 @@ function EventTimeline() {
       function: "Ladies Sangeet",
       logo: imgs.cgrMap,
       name: "Hotel Black Panther",
-      address: "7th Floor, CGR Mall, Hanumangarh Rd, Chahal Chowk",
+      address: "7th Floor, CGR Mall, Hanumangarh Road, Chahal Chowk",
       url: "https://goo.gl/maps/XbYBDeBBzgpFArjB6",
       color: "rgba(19, 89, 144, 0.9)",
       shadowColor: "rgba(19, 89, 144, 0.2)",
@@ -136,7 +136,7 @@ function EventTimeline() {
                 </Text>
                 <Text
                   size={FontSize.Small}
-                  styles={{ marginTop: "0.5rem" }}
+                  styles={{ marginTop: "0.5rem",  fontFamily: "Times new Roman"}}
                   color="white"
                 >
                   {item?.address}

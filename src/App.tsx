@@ -1,18 +1,20 @@
-import "./App.css";
-import Dashboard from "./dashboard";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import NotFound from "./components/notFound";
+import Countdown from "./components/countdown";
+import EventTimeline from "./components/eventTimeline";
+import Footer from "./components/footer";
+import HeroImage from "./components/heroImage";
+import Introduction from "./components/introduction";
+import SpecialRequests from "./components/specialRequests";
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/" exact>
-          <Dashboard />
-        </Route>
-        <Route component={NotFound} />
-      </Switch>
-    </Router>
+    <>
+      <HeroImage />
+      <Introduction />
+      <Countdown date="06/22/2022, 23:59:59" />
+      <EventTimeline />
+      <SpecialRequests />
+      <Footer />
+    </>
   );
 }
 
