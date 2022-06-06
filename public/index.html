@@ -9,16 +9,22 @@
       name="description"
       content="Let us be blessed with your presence during the holy occasion."
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/android-chrome-192x192.png" />
+    <link
+      rel="apple-touch-icon"
+      href="%PUBLIC_URL%/android-chrome-192x192.png"
+    />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Marck+Script&display=swap" rel="stylesheet">
-  
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Marck+Script&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./sakura.css" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -63,11 +69,21 @@
       });
       sakura.start();
     </script>
-    <script>
-      window.onload = function() {
+    <!-- <script>
+      window.onload = function () {
         var context = new AudioContext();
+      };
+    </script> -->
+    <script>
+      var isChrome =
+        /Chrome/.test(navigator.userAgent) &&
+        /Google Inc/.test(navigator.vendor);
+      if (!isChrome) {
+        document.getElementById("#iframeAudio")?.remove();
+      } else {
+        document.getElementById("#playAudio")?.remove();
       }
-      </script>
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

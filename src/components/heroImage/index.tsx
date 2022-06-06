@@ -1,21 +1,20 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import { StyledContainer } from "./style";
-import song from "../../assets/mp3/song.mp3";
 
 function HeroImage() {
-  const url =
-    "https://www.youtube.com/watch?v=rtOvBOTyX00";
+  const id = "1ebnYc7Aj08Pwr7311P1MnSV18snBhXJp";
+  const link = `https://docs.google.com/uc?export=open&id=${id}`;
 
   return (
     <StyledContainer>
       <iframe
-        src={require("../../assets/mp3/song.mp3")}
+        src={link}
         allow="autoplay"
-        id="audio"
+        id="iframeAudio"
         style={{ display: "none" }}
       ></iframe>
-      <audio autoPlay controls>
-        <source src={require("../../assets/mp3/song.mp3")} type="audio/mp3" />
+      <audio autoPlay id="playAudio">
+        <source src={link} type="audio/mp3" />
       </audio>
     </StyledContainer>
   );
